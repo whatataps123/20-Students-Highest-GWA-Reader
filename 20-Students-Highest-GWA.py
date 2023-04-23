@@ -8,15 +8,16 @@ def student():
 # open studentgwa.txt (read)
     with open("studentgwa.txt", "r") as input_gwa:
         student_data = {}
-# read the file line by line
+        # read the file line by line
         for line in input_gwa:
             name, gwa = line.strip().split(",")
             gwa = float(gwa)
-            student.data[name] = gwa
-# find the min gwa(lesser is better) of the student
-low_gwa_student = min(student_data[name])
-low_gwa = student_data[low_gwa_student]
+            student_data[name] = gwa
+            # find the min gwa(lesser is better) of the student
+            low_gwa_student = min(student_data, key = student_data.get)
+            low_gwa = student_data[low_gwa_student]
 
-# print name of student and gwa
-print(low_gwa)
+        # print name of student and gwa
+        print("The student who got the highest GWA:", low_gwa_student, "Their GWA:", low_gwa)
+
 student()
