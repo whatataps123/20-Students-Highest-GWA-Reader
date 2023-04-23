@@ -6,5 +6,5 @@
 
 # open studentgwa.txt (read)
 # read the file line by line
-# if i is >
-# print i
+# find the min gwa(lesser is better) of the student
+# print name of student and gwa
